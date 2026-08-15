@@ -8,8 +8,8 @@ A mobile-responsive React single-page application for Loxistica field operations
 
 | Layer   | Technology                           |
 | ------- | ------------------------------------ |
-| UI      | React 18 + React Router 6            |
-| Bundler | Vite 5                               |
+| UI      | React 19.2.8 + React Router 7        |
+| Bundler | Vite 8                               |
 | Auth    | OAuth 2.0 Authorization Code         |
 | API     | Fetch API (direct to ERPNext)        |
 | Styling | CSS custom properties (no framework) |
