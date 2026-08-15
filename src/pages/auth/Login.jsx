@@ -52,8 +52,7 @@ export default function Login({ error }) {
         )}
 
         <p style={S.desc}>
-          Sign in with your ERPNext credentials to access the field operations
-          portal.
+          Sign in with your ERPNext credentials to access the portal.
         </p>
 
         {/*
@@ -123,7 +122,7 @@ export default function Login({ error }) {
 
       <div style={S.footer}>
         <span style={S.dot} />
-        <span>erp.loxng.com</span>
+        <span>Loxistica</span>
         <span style={S.dot} />
         <span>v2.1</span>
         <span style={S.dot} />
