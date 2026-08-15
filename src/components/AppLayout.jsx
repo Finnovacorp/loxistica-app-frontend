@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth.js";
+import { useAuth } from "../hooks/useAuth.jsx";
 
 const FIELD_LINKS = [{ path: "/tasks", label: "MY TASKS", icon: "▦" }];
 

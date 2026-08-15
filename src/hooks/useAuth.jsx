@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { TokenStore, revokeToken, fetchProfile } from "../lib/auth";
+import { TokenStore, revokeToken, fetchProfile } from "../lib/auth.js";
 
 const AuthContext = createContext(null);
 
