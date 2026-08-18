@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./index.css";
 
 import { AuthProvider, useAuth } from "./hooks//useAuth.jsx";
+import InstallBanner from "./components/InstallBanner.jsx";
 
 import Login from "./pages/auth/Login.jsx";
 import Callback from "./pages/auth/Callback.jsx";
@@ -65,6 +66,9 @@ function Spinner() {
 function App() {
   return (
     <AuthProvider>
+      {/* InstallBanner lives outside the router so it's always rendered */}
+      <InstallBanner />
+
       <BrowserRouter>
         <Routes>
           {/* Public */}

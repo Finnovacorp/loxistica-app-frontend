@@ -25,17 +25,17 @@ export default function AppLayout({ children }) {
     <div style={S.shell}>
       {/* ── Nav ── */}
       <nav style={S.nav}>
-        <div style={S.logo}>
-          LOX<span style={{ opacity: 0.65 }}>ISTICA</span>
-        </div>
+        {/* Real logo image */}
+        <img src="/logo.png" alt="Loxistica" style={S.logoImg} />
+
         <div style={S.navRight}>
           <div style={S.userBlock}>
             <span style={S.userName}>{user?.name || user?.email}</span>
-            {/* {user?.name && <span style={S.userEmail}>{user?.email}</span>} */}
+            {user?.name && <span style={S.userEmail}>{user?.email}</span>}
           </div>
-          {/* <span style={{ ...S.badge, ...(isOpsManager ? S.badgeOps : {}) }}>
+          <span style={{ ...S.badge, ...(isOpsManager ? S.badgeOps : {}) }}>
             {isOpsManager ? "OPS MGR" : "FIELD"}
-          </span> */}
+          </span>
           <button style={S.logoutBtn} onClick={handleLogout}>
             Sign out
           </button>
@@ -74,9 +74,9 @@ const S = {
     flexDirection: "column",
     background: "var(--bg)",
   },
+  /* Nav */
   nav: {
     background: "var(--primary)",
-    borderBottom: "1px solid var(--green-800)",
     padding: "0 16px",
     height: 58,
     display: "flex",
@@ -86,14 +86,15 @@ const S = {
     top: 0,
     zIndex: 50,
     flexShrink: 0,
-    boxShadow: "0 2px 8px rgba(0,88,53,0.18)",
+    boxShadow: "0 2px 8px rgba(0,88,53,0.22)",
   },
-  logo: {
-    fontFamily: "var(--mono)",
-    fontWeight: 600,
-    fontSize: 16,
-    letterSpacing: "0.1em",
-    color: "#ffffff",
+
+  /* Logo — white version via CSS filter so it shows on green nav */
+  logoImg: {
+    height: 30,
+    maxWidth: 160,
+    objectFit: "contain",
+    filter: "brightness(0) invert(1)" /* turns any colour to white */,
     flexShrink: 0,
   },
   navRight: { display: "flex", alignItems: "center", gap: 10, minWidth: 0 },
