@@ -1,15 +1,5 @@
 import { usePwaInstall } from "../hooks/usePwaInstall.js";
 
-/**
- * InstallBanner
- *
- * A bottom-sheet install prompt that appears automatically as soon as
- * the browser fires `beforeinstallprompt`. Slide-up animation, branded
- * with the Loxistica logo and green theme.
- *
- * Renders nothing when already installed or when the browser doesn't
- * support PWA installation (e.g. Firefox desktop, Safari < 16.4).
- */
 export default function InstallBanner() {
   const { canInstall, promptInstall, dismiss } = usePwaInstall();
 
@@ -114,8 +104,7 @@ export default function InstallBanner() {
             fontFamily: "'IBM Plex Sans', sans-serif",
           }}
         >
-          Add Loxistica to your home screen for quick access to your tasks —
-          works just like a native app.
+          Add Loxistica to your home screen
         </p>
 
         {/* Feature pills */}
@@ -124,10 +113,10 @@ export default function InstallBanner() {
             display: "flex",
             gap: 8,
             flexWrap: "wrap",
-            marginBottom: 20,
+            marginBottom: 5,
           }}
         >
-          {["⚡ Instant launch", "📋 Task management", "🔔 Stays updated"].map(
+          {/* {["⚡ Instant launch", "📋 Task management", "🔔 Stays updated"].map(
             (f) => (
               <span
                 key={f}
@@ -144,7 +133,7 @@ export default function InstallBanner() {
                 {f}
               </span>
             ),
-          )}
+          )} */}
         </div>
 
         {/* Buttons */}
